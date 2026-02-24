@@ -11,7 +11,7 @@ def create_app():
 
     db.init_app(app)
     jwt.init_app(app)
-    cors.init_app(app, origins=os.getenv("FRONTEND_URL", "http://localhost:5173"))
+    cors.init_app(app, origins=os.getenv("FRONTEND_URL", "https://focusboard-fullstack.vercel.app"))
 
     from . import models
     from .routes.auth import auth_bp
