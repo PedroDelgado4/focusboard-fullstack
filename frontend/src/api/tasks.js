@@ -1,5 +1,4 @@
 const API_URL = import.meta.env.VITE_API_URL + "/api/tasks/"
-console.log("API_URL:", API_URL)
 export async function getTasks(token) {
     const response = await fetch(API_URL, {
         headers: {
