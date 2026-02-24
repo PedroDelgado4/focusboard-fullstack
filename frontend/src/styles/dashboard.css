@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Fondo */
+.app-container {
+    min-height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.dashboard-card {
+    background: #ffffff;
+    width: 420px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.dashboard-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+
+.dashboard-card > button:hover {
+    background-color: #dc2626;
+}
+
+/* Form */
+.dashboard-card form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.dashboard-card input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Botones */
+.dashboard-card button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 14px;
+    transition: all 0.15s ease;
+}
+
+.dashboard-card button:hover {
+    transform: translateY(-1px);
+}
+
+/* Lista */
+.dashboard-card ul {
+    list-style: none;
+}
+
+/* Item */
+.dashboard-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: background 0.15s ease;
+}
+
+.dashboard-card li:hover {
+    background-color: #f1f5f9;
+}
+
+/* Texto completado */
+.completed {
+    text-decoration: line-through;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+/* Logout específico */
+.logout-btn {
+    flex-shrink: 0; /* Nunca se encoge */
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 8px;
+    background-color: #ef4444;
+    white-space: nowrap;
+}
+
+.logout-btn:hover {
+    background-color: #dc2626;
+}
+
+/* Form espaciado */
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px 10px;
+    color: #64748b;
+}
+
+.empty-state p {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.task-counter {
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-start; /* Alineación superior real */
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Título */
+.dashboard-title {
+    margin: 0;
+    font-weight: 600;
+
+    /* Hace que el texto pueda crecer y empujar hacia abajo */
+    flex: 1;
+
+    /* Ajuste automático del tamaño */
+    font-size: clamp(16px, 2.2vw, 22px);
+
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+    animation: fadeIn 0.25s ease forwards;
+    opacity: 0;
+}
+
+.task-item:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-text {
+    cursor: pointer;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #ef4444;
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+.delete-btn:hover {
+    background-color: #fee2e2;
+}
