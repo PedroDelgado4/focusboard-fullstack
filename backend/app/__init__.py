@@ -13,12 +13,15 @@ def create_app():
     jwt.init_app(app)
     cors.init_app(app, origins=os.getenv("FRONTEND_URL", "http://localhost:5173"))
 
-    # Registrar rutas
     from . import models
     from .routes.auth import auth_bp
     from .routes.tasks import tasks_bp
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(tasks_bp, url_prefix="/api/tasks")
+
+    # Crear tablas automaticamente
+    with app.app_context():
+        db.create_all()
 
     return app
