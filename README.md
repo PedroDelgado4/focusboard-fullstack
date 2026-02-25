@@ -107,7 +107,7 @@ It demonstrates production-ready authentication, REST API design, and deployment
 F. Pedro Delgado
 GitHub: https://github.com/PedroDelgado4
 
-
+```markdown
 ## Screenshots
 
 ### Login
@@ -115,5 +115,5 @@ GitHub: https://github.com/PedroDelgado4
 
 ### Dashboard
 ![Dashboard](./screenshots/focusboard.png)
-
+```
 
