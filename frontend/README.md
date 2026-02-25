@@ -1,16 +1,119 @@
-# React + Vite
+# FocusBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Full Stack task management application built with React and Flask.
 
-Currently, two official plugins are available:
+Live Demo: https://focusboard-fullstack.vercel.app  
+Backend API: https://focusboard-fullstack.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React (Hooks, Context API)
+- React Router
+- Custom Hooks
+- Fetch API
+- CSS modular styling
+- Vite
 
-## Expanding the ESLint configuration
+### Backend
+- Flask (App Factory pattern)
+- Flask-JWT-Extended
+- Flask-SQLAlchemy
+- PostgreSQL (Production)
+- SQLite (Development)
+- CORS configuration
+- Gunicorn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: Render PostgreSQL
+
+---
+
+## Authentication
+
+- JWT-based authentication
+- Protected routes
+- Token persistence via localStorage
+- Auto logout on token expiration
+- Secure password hashing
+
+---
+
+## Features
+
+- User registration & login
+- Persistent sessions
+- Create tasks
+- Toggle completion
+- Delete tasks
+- User-specific task isolation
+- Demo account available
+- Floating GitHub profile button
+
+---
+
+## Demo User
+
+- Email: demo@focusboard.com
+- Password: demo123
+> Note: Backend may take up to 60 seconds to wake up on first request (Render free tier).
+
+---
+
+## Project Architecture
+
+### Backend
+- App Factory pattern
+- Blueprints (auth, tasks)
+- Service layer abstraction
+- Environment-based configuration
+
+### Frontend
+- API layer separation
+- Custom hook (`useTasks`)
+- Context-based authentication
+- ProtectedRoute component
+- Reusable UI components
+
+---
+
+## Running Locally
+
+### Backend
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+flask run
+```
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Purpose of the project
+This project was built as part of my transition into Full Stack Web Development.
+It demonstrates production-ready authentication, REST API design, and deployment workflows.
+
+## Author
+
+F. Pedro Delgado
+GitHub: https://github.com/PedroDelgado4
+
+
+## Screenshots
+
+### Login
+![Login](./screenshots/login-focusboard.png)
+
+### Dashboard
+![Dashboard](./screenshots/focusboard.png)
+
+
