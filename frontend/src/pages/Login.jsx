@@ -64,6 +64,12 @@ function Login(){
                         </span>
                     </p>
                 </form>
+                <p className="cold-start-warning">
+                ⚠️ El backend puede tardar hasta 30 segundos en activarse si está inactivo (hosting gratuito).
+                </p>
+                <p className="demo-credentials">
+                    Usuario demo: <strong>demo@focusboard.com</strong> | Contraseña: <strong>demo123</strong>
+                </p>
             </div>
             
             
