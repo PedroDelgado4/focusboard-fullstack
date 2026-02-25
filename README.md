@@ -111,9 +111,9 @@ GitHub: https://github.com/PedroDelgado4
 ## Screenshots
 
 ### Login
-![Login](/screenshots/login-focusboard.png)
+![Login](./screenshots/login-focusboard.PNG)
 
 ### Dashboard
-![Dashboard](/screenshots/focusboard.png)
+![Dashboard](./screenshots/focusboard.PNG)
 
 
